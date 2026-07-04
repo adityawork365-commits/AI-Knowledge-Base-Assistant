@@ -1,1 +1,52 @@
+# 🤖 AI Knowledge Base Assistant
+
+An AI-powered Knowledge Base Assistant built with **n8n**, **Google Gemini**, and **Retrieval-Augmented Generation (RAG)**.
+
+This project automatically collects Question & Answer submissions through a form, enriches them using AI-generated tags, stores them in a searchable knowledge base, and allows users to ask questions through an intelligent AI chatbot.
+
+---
+
+# 🚀 Features
+
+- 📋 Public Q&A Submission Form
+- 🤖 AI-generated Tags using Google Gemini
+- 🗄️ Automatic Data Storage in n8n Data Table
+- 🔍 Retrieval-Augmented Generation (RAG)
+- 💬 AI Chat Assistant
+- 🧠 Conversation Memory
+- ⚡ Built completely in n8n
+- 🔄 No custom backend required
+
+---
+
+# 🏗️ Project Architecture
+
+```
+
+User
+│
+▼
+
+Q&A Form
+│
+▼
+
+Email Validation
+│
+▼
+
+Google Gemini
+(AI Tag Generation)
+│
+▼
+
+Q&A Data Table
+│
+▼
+
+AI Agent (RAG)
+│
+▼
+
+Chat Interface
 
