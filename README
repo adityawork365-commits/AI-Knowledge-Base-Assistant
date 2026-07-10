@@ -1,7 +1,11 @@
 # 🤖 AI Knowledge Base Assistant
 
-An AI-powered Knowledge Base Assistant built using **n8n**, **Google Gemini**, and **Retrieval-Augmented Generation (RAG)**.
+![n8n](https://img.shields.io/badge/n8n-Automation-orange)
+![Gemini](https://img.shields.io/badge/Google-Gemini-blue)
+![RAG](https://img.shields.io/badge/AI-RAG-success)
+![License](https://img.shields.io/badge/License-MIT-green)
 
+An AI-powered Knowledge Base Assistant built using **n8n**, **Google Gemini**, and **Retrieval-Augmented Generation (RAG)**.
 This project automates the complete lifecycle of knowledge management by collecting user questions through a public form, validating submissions, generating AI-powered tags using Google Gemini, storing structured knowledge inside n8n Data Tables, and answering future queries through a Retrieval-Augmented Generation (RAG) AI Assistant.
 
 ---
