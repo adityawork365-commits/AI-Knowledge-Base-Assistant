@@ -2,13 +2,13 @@
 
 An AI-powered Knowledge Base Assistant built using **n8n**, **Google Gemini**, and **Retrieval-Augmented Generation (RAG)**.
 
-This project automatically collects Question & Answer submissions through a form, enriches them using AI-generated tags, stores them in a searchable knowledge base, and enables users to ask intelligent questions using a RAG-powered AI Assistant.
+This project automates the complete lifecycle of knowledge management by collecting user questions through a public form, validating submissions, generating AI-powered tags using Google Gemini, storing structured knowledge inside n8n Data Tables, and answering future queries through a Retrieval-Augmented Generation (RAG) AI Assistant.
 
 ---
 
 # 📸 Workflow Overview
 
-> Complete n8n workflow of the AI Knowledge Base Assistant.
+The complete automation workflow built inside n8n.
 
 ![Workflow Overview](assets/workflow-overview.png)
 
@@ -19,70 +19,100 @@ This project automatically collects Question & Answer submissions through a form
 - 📋 Public Question & Answer Submission Form
 - ✅ Email Validation
 - 🤖 AI-generated Tags using Google Gemini
-- 🗄️ Automatic Storage in n8n Data Tables
+- 🗄️ Automatic Knowledge Base Storage
 - 🔍 Retrieval-Augmented Generation (RAG)
 - 💬 AI Chat Assistant
 - 🧠 Conversation Memory
 - ⚡ Fully Automated using n8n
+- 📊 Structured Knowledge Management
 - 🔄 No Custom Backend Required
 
 ---
 
-# 📝 Form Submission Workflow
+# 📝 Question & Answer Submission Form
 
-The submission workflow validates user inputs, generates AI-powered tags using Google Gemini, and stores structured data inside the Knowledge Base.
+Users can submit their Name, Email, and Question using a public form.
+
+Every submission enters the automation workflow for validation and AI processing.
+
+![Question & Answer Submission Form](assets/question-answer-submission-form.png)
+
+---
+
+# ⚙️ Form Submission Workflow
+
+This workflow validates the email address, generates AI-powered tags using Google Gemini, and stores the processed data inside the Knowledge Base.
 
 ![Form Submission Workflow](assets/form-submission-workflow.png)
 
 ---
 
+# 🗄️ Knowledge Base
+
+All validated questions, answers, metadata, and AI-generated tags are automatically stored inside an n8n Data Table for future retrieval.
+
+![Knowledge Base](assets/knowledge-base-table.png)
+
+---
+
 # 🤖 RAG Chat Workflow
 
-The AI Assistant retrieves relevant knowledge from the database and generates accurate responses using Retrieval-Augmented Generation (RAG).
+When a user asks a question, the AI Assistant searches the Knowledge Base, retrieves the most relevant information, and generates an accurate contextual response using Retrieval-Augmented Generation (RAG).
 
 ![RAG Chat Workflow](assets/rag-chat-workflow.png)
+
+---
+
+# 💬 AI Chat Demo
+
+Example conversation with the AI Knowledge Base Assistant.
+
+![Chat Demo](assets/chat-demo.png)
 
 ---
 
 # 🏗️ Project Architecture
 
 ```text
-                User
-                  │
-                  ▼
-        Q&A Submission Form
-                  │
-                  ▼
+                 User
+                   │
+                   ▼
+      Question & Answer Form
+                   │
+                   ▼
           Email Validation
-                  │
-                  ▼
-      Google Gemini (AI Tag Generation)
-                  │
-                  ▼
-      n8n Data Table (Knowledge Base)
-                  │
-                  ▼
-        AI Agent (RAG Retrieval)
-                  │
-                  ▼
-          AI Chat Assistant
+                   │
+                   ▼
+      Google Gemini (AI Tags)
+                   │
+                   ▼
+     n8n Data Table (Knowledge Base)
+                   │
+                   ▼
+      AI Agent (RAG Retrieval)
+                   │
+                   ▼
+         AI Chat Assistant
 ```
 
 ---
 
-# 📂 Repository Structure
+# 📂 Project Structure
 
-```
+```text
 AI-Knowledge-Base-Assistant/
-│
-├── assets/
-│   ├── workflow-overview.png
-│   ├── form-submission-workflow.png
-│   └── rag-chat-workflow.png
 │
 ├── workflows/
 │   ├── form-submission-workflow.json
 │   └── rag-chat-assistant.json
+│
+├── assets/
+│   ├── workflow-overview.png
+│   ├── question-answer-submission-form.png
+│   ├── form-submission-workflow.png
+│   ├── knowledge-base-table.png
+│   ├── rag-chat-workflow.png
+│   └── chat-demo.png
 │
 ├── README.md
 ├── LICENSE
@@ -91,7 +121,7 @@ AI-Knowledge-Base-Assistant/
 
 ---
 
-# ⚙️ Technologies Used
+# 🛠️ Technologies Used
 
 - n8n
 - Google Gemini
@@ -105,24 +135,37 @@ AI-Knowledge-Base-Assistant/
 # 📥 Installation
 
 1. Clone this repository.
-2. Import the workflow JSON files into n8n.
+2. Import both workflow JSON files into n8n.
 3. Configure your Google Gemini credentials.
 4. Create the required n8n Data Table.
-5. Activate the workflows.
+5. Activate both workflows.
 
 ---
 
-# 💡 Example Workflow
+# 💡 How It Works
 
-1. User submits a question using the public form.
-2. Email is validated automatically.
-3. Google Gemini generates AI tags.
-4. The submission is stored in the Knowledge Base.
+1. User submits a question through the public form.
+2. Email is validated.
+3. Google Gemini generates intelligent tags.
+4. The submission is stored inside the Knowledge Base.
 5. The AI Assistant retrieves relevant information using RAG.
-6. The chatbot returns an accurate response.
+6. Context-aware answers are generated for future users.
+
+---
+
+# 📌 Use Cases
+
+- Internal Company Knowledge Base
+- FAQ Automation
+- AI Customer Support
+- Documentation Search
+- Team Knowledge Sharing
+- AI Help Desk
 
 ---
 
 # ⭐ Support
 
-If you found this project helpful, consider giving this repository a ⭐ on GitHub.
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and supports future development.
